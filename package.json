@@ -18,6 +18,7 @@
   "type": "module",
   "homepage": "https://github.com/VladislavVovk/frontend-project-lvl1#readme",
   "bin": {
-    "code": "brain-games.js"
+    "code": "brain-games.js",
+    "brain-games": "bin/brain-games.js"
   }
 }
