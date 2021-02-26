@@ -1,8 +1,8 @@
-install: 
+install: all
 	npm install
 
-brain-games:
+brain-games: 
 	node bin/brain-games.js
 
-publish:
+publish: all
 	npm publish --dry-run
