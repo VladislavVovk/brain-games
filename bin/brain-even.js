@@ -9,30 +9,36 @@ const rand = () => {
 }
 export const brainEven = () => {
 
-    console.log('Welcome to The Brain Games!\n');
+    console.log('Welcome to The Brain Games!');
     const name = readlineSync.question('May I have your name? ');
-    console.log('Hello, ' + name + '!\n');
+    console.log('Hello, ' + name + '!');
     console.log('Answer "yes" if the number is even, otherwise answer "no".\n');
+    let win = 0;
+    for (let i = 0; i < 3; i += 1){
+        let num = rand();
+        let ask;
+        
 
-    let num = rand();
-    let ask;
+        if(num % 2 === 0) {
+            ask = 'yes'
+        }
+        else {
+            ask = 'no'
+        }
 
-    if(num % 2 === 0) {
-        ask = 'yes'
+        console.log('Question: ' + num);
+        const answer = readlineSync.question('Your answer: ');
+        if (answer == ask) {
+            console.log('Correct!')
+            win += 1;
+        }
+        else {
+            console.log(`'${answer}' is wrong answer ;(. Correct answer was '${ask}'.`);
+            console.log(`Let's try again, ${name}!`);
+            break;
+        } 
     }
-    else {
-        ask = 'no'
-    }
-
-    console.log('Question: ' + num);
-    const answer = readlineSync.question('Your answer: ');
-    if (answer == ask) {
-        console.log('Correct!\n')
-    }
-    else {
-        console.log(`\n'${answer}' is wrong answer ;(. Correct answer was '${ask}'.`);
-        console.log(`Let's try again, ${name}!`);
-    }
+    if (win === 3) console.log(`Congratulations, ${name}!`);
 }
 
 brainEven();
