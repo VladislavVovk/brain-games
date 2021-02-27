@@ -1,5 +1,5 @@
 {
-  "name": "@haxlet/code",
+  "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/VladislavVovk/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/VladislavVovk/frontend-project-lvl1/actions)",
   "main": "index.js",
