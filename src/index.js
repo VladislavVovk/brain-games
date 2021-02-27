@@ -82,3 +82,36 @@ export const brainCalc = () => {
     }
     if (win === 3) console.log(`Congratulations, ${name}!`);
 }
+
+const nod = (x, y) => {
+    if (y > x) return nod(y, x);
+    if (!y) return x;
+    return nod(y, x % y);
+}
+
+export const brainGCD = () => {
+
+    console.log('Welcome to The Brain Games!');
+    const name = readlineSync.question('May I have your name? ');
+    console.log('Hello, ' + name + '!');
+    console.log('Find the greatest common divisor of given numbers.');
+    let win = 0;
+    for (let i = 0; i < 3; i += 1){
+        let a = rand(0, 100);
+        let b = rand(0, 100);
+        let ask = nod(a, b);
+        console.log(`Question: ${a} ${b}`);
+        const answer = readlineSync.question('Your answer: ');
+
+        if(answer == ask) {
+            console.log('Correct!')
+            win += 1;
+        }
+        else {
+            console.log(`'${answer}' is wrong answer ;(. Correct answer was '${ask}'.`);
+            console.log(`Let's try again, ${name}!`);
+            break;
+        }
+    }
+    if (win === 3) console.log(`Congratulations, ${name}!`);
+}
