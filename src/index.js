@@ -115,3 +115,46 @@ export const brainGCD = () => {
     }
     if (win === 3) console.log(`Congratulations, ${name}!`);
 }
+
+export const brainProgression = () => {
+
+    console.log('Welcome to The Brain Games!');
+    const name = readlineSync.question('May I have your name? ');
+    console.log('Hello, ' + name + '!');
+    console.log('What number is missing in the progression?');
+
+    let win = 0;
+    
+
+    for (let i = 0; i < 3; i += 1) {
+
+        let array = [];
+        let step = rand(1, 10);
+        let begin = rand(1, 100);
+        let elem = rand(0,9);
+
+        for (let j = 0; j < 11; j+=1 ) {
+            array.push(begin);
+            begin += step;
+        }
+
+        let ask = array[elem];
+        array[elem] = '..';
+        let str = array.join(' ');
+        console.log(`Question: ${str}`);
+        const answer = readlineSync.question('Your answer: ');
+
+        if(answer == ask) {
+            console.log('Correct!');
+            win += 1;
+        }
+        else {
+            console.log(`'${answer}' is wrong answer ;(. Correct answer was '${ask}'.`);
+            console.log(`Let's try again, ${name}!`);
+            break;
+        }
+    }
+    if (win === 3) console.log(`Congratulations, ${name}!`);
+}
+
+brainProgression();
