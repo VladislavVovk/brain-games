@@ -21,13 +21,12 @@ const brainCalc = () => {
         let a = rand(0, 100);
         let b = rand(0, 100);
         let sign = signs[rand(0,2)];
-        console.log(sign);
         let result;
 
         if (sign == '+') result = a + b;
         if (sign == '-') result = a - b;
         if (sign == '*') result = a * b;
-console.log(result);
+        
         console.log(`Question: ${a} ${sign} ${b}`);
         const answer = readlineSync.question('Your answer: ');
 
