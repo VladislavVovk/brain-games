@@ -156,3 +156,33 @@ export const brainProgression = () => {
     }
     if (win === 3) console.log(`Congratulations, ${name}!`);
 }
+
+export const brainPrime = () => {
+    console.log('Welcome to The Brain Games!');
+    const name = readlineSync.question('May I have your name? ');
+    console.log('Hello, ' + name + '!');
+    console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+
+    let win = 0;
+
+    for (let i = 0; i < 3; i += 1) {
+        let num = rand(1,100);
+        let ask = 'yes';
+
+        for(let j = 2;j < num; j += 1) {
+            if (num % j === 0) ask = 'no';
+        }
+        console.log(`Question: ${num}`);
+        const answer = readlineSync.question('Your answer: ');
+        if (ask == answer) {
+            console.log('Correct!');
+            win += 1;
+        }
+        else {
+            console.log(`'${answer}' is wrong answer ;(. Correct answer was '${ask}'.`);
+            console.log(`Let's try again, ${name}!`);
+            break;
+        }
+    }
+    if (win === 3) console.log(`Congratulations, ${name}!`);
+}
