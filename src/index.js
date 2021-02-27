@@ -17,7 +17,7 @@ export const brainEven = () => {
     console.log('Welcome to The Brain Games!');
     const name = readlineSync.question('May I have your name? ');
     console.log('Hello, ' + name + '!');
-    console.log('Answer "yes" if the number is even, otherwise answer "no".\n');
+    console.log('Answer "yes" if the number is even, otherwise answer "no".');
     let win = 0;
     for (let i = 0; i < 3; i += 1){
         let num = rand(1, 100);
