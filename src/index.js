@@ -156,5 +156,3 @@ export const brainProgression = () => {
     }
     if (win === 3) console.log(`Congratulations, ${name}!`);
 }
-
-brainProgression();
