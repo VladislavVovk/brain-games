@@ -8,7 +8,8 @@ const rand = () => {
     let randNumber = Math.floor(Math.random() * (max - min)) + min;
     return randNumber;
 }
-export const brainEven = () => {
+
+const brainEven = () => {
 
     console.log('Welcome to The Brain Games!');
     const name = readlineSync.question('May I have your name? ');
