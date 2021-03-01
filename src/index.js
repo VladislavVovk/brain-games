@@ -61,7 +61,7 @@ export const brainCalc = () => {
     console.log(`Question: ${a} ${sign} ${b}`);
     const answer = readlineSync.question('Your answer: ');
 
-    if (answer === result) {
+    if (answer == result) {
       console.log('Correct!');
       win += 1;
     } else {
