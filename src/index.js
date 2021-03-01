@@ -157,7 +157,7 @@ export const brainPrime = () => {
   let win = 0;
 
   for (let i = 0; i < 3; i += 1) {
-    let num = rand(1,100);
+    const num = rand(1,100);
     let ask = 'yes';
     for(let j = 2;j < num; j += 1) {
       if (num % j === 0) ask = 'no';
