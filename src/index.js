@@ -92,7 +92,7 @@ export const brainGCD = () => {
     console.log(`Question: ${a} ${b}`);
     const answer = readlineSync.question('Your answer: ');
 
-    if (answer === ask) {
+    if (answer == ask) {
       console.log('Correct!');
       win += 1;
     } else {
@@ -128,7 +128,7 @@ export const brainProgression = () => {
     console.log(`Question: ${str}`);
     const answer = readlineSync.question('Your answer: ');
 
-    if (answer === ask) {
+    if (answer == ask) {
       console.log('Correct!');
       win += 1;
     } else {
@@ -156,7 +156,7 @@ export const brainPrime = () => {
     }
     console.log(`Question: ${num}`);
     const answer = readlineSync.question('Your answer: ');
-    if (ask === answer) {
+    if (ask == answer) {
       console.log('Correct!');
       win += 1;
     } else {
