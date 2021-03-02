@@ -86,7 +86,7 @@ export const brainGCD = () => {
   console.log('Find the greatest common divisor of given numbers.');
   let win = 0;
   for (let i = 0; i < 3; i += 1) {
-	  const a = rand(0, 100);
+    const a = rand(0, 100);
     const b = rand(0, 100);
     const ask = nod(a, b);
     console.log(`Question: ${a} ${b}`);
@@ -115,8 +115,7 @@ export const brainProgression = () => {
     const step = rand(1, 10);
     let begin = rand(1, 100);
     const elem = rand(0, 9);
-
-    for (let j = 0; j < 11; j += 1 ) {
+    for (let j = 0; j < 11; j += 1) {
       array.push(begin);
       begin += step;
     }
@@ -148,9 +147,9 @@ export const brainPrime = () => {
   let win = 0;
 
   for (let i = 0; i < 3; i += 1) {
-    const num = rand(1,100);
+    const num = rand(1, 100);
     let ask = 'yes';
-    for (let j = 2;j < num;j += 1) {
+    for (let j = 2; j < num; j += 1) {
       if (num % j === 0) ask = 'no';
     }
     console.log(`Question: ${num}`);
