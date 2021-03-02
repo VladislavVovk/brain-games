@@ -54,14 +54,14 @@ export const brainCalc = () => {
     const sign = signs[rand(0, 2)];
     let result;
 
-    if (sign === '+') result = a + b;
-    if (sign === '-') result = a - b;
-    if (sign === '*') result = a * b;
+    if (sign === '+') result = (a + b) + '';
+    if (sign === '-') result = (a - b) + '';
+    if (sign === '*') result = (a * b) + '';
 
     console.log(`Question: ${a} ${sign} ${b}`);
     const answer = readlineSync.question('Your answer: ');
 
-    if (answer == result) {
+    if (answer === result) {
       console.log('Correct!');
       win += 1;
     } else {
@@ -88,11 +88,11 @@ export const brainGCD = () => {
   for (let i = 0; i < 3; i += 1) {
     const a = rand(0, 100);
     const b = rand(0, 100);
-    const ask = nod(a, b);
+    const ask = nod(a, b) + '';
     console.log(`Question: ${a} ${b}`);
     const answer = readlineSync.question('Your answer: ');
 
-    if (answer == ask) {
+    if (answer === ask) {
       console.log('Correct!');
       win += 1;
     } else {
@@ -120,13 +120,13 @@ export const brainProgression = () => {
       begin += step;
     }
 
-    const ask = array[elem];
+    const ask = array[elem] + '';
     array[elem] = '..';
     const str = array.join(' ');
     console.log(`Question: ${str}`);
     const answer = readlineSync.question('Your answer: ');
 
-    if (answer == ask) {
+    if (answer === ask) {
       console.log('Correct!');
       win += 1;
     } else {
@@ -154,7 +154,7 @@ export const brainPrime = () => {
     }
     console.log(`Question: ${num}`);
     const answer = readlineSync.question('Your answer: ');
-    if (ask == answer) {
+    if (ask === answer) {
       console.log('Correct!');
       win += 1;
     } else {
