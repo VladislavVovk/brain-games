@@ -24,18 +24,18 @@ export const brainEven = () => {
     if (num % 2 === 0) {
       ask = 'yes';
     } else {
-        ask = 'no';
-      }
+      ask = 'no';
+    }
     console.log(`Question: ${num}`);
     const answer = readlineSync.question('Your answer: ');
     if (answer === ask) {
-			console.log('Correct!');
+      console.log('Correct!');
       win += 1;
     } else {
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${ask}'.`);
-        console.log(`Let's try again, ${name}!`);
-        break;
-      } 
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${ask}'.`);
+      console.log(`Let's try again, ${name}!`);
+      break;
+    }
   }
   if (win === 3) console.log(`Congratulations, ${name}!`);
 };
@@ -45,10 +45,10 @@ export const brainCalc = () => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log('What is the result of the expression?');
-	let win = 0;
-	let signs = ['+', '-', '*'];
+  let win = 0;
+  const signs = ['+', '-', '*'];
 
-  for (let i = 0; i < 3; i += 1){
+  for (let i = 0; i < 3; i += 1) {
     const a = rand(0, 100);
     const b = rand(0, 100);
     const sign = signs[rand(0, 2)];
@@ -57,7 +57,7 @@ export const brainCalc = () => {
     if (sign === '+') result = a + b;
     if (sign === '-') result = a - b;
     if (sign === '*') result = a * b;
-        
+
     console.log(`Question: ${a} ${sign} ${b}`);
     const answer = readlineSync.question('Your answer: ');
 
@@ -65,10 +65,10 @@ export const brainCalc = () => {
       console.log('Correct!');
       win += 1;
     } else {
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
-        console.log(`Let's try again, ${name}!`);
-        break;
-      }
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
+      console.log(`Let's try again, ${name}!`);
+      break;
+    }
   }
   if (win === 3) console.log(`Congratulations, ${name}!`);
 };
@@ -80,13 +80,13 @@ const nod = (x, y) => {
 };
 
 export const brainGCD = () => {
-	console.log('Welcome to The Brain Games!');
+  console.log('Welcome to The Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log('Find the greatest common divisor of given numbers.');
   let win = 0;
-  for (let i = 0;i < 3;i += 1){
-		const a = rand(0, 100);
+  for (let i = 0; i < 3; i += 1) {
+	  const a = rand(0, 100);
     const b = rand(0, 100);
     const ask = nod(a, b);
     console.log(`Question: ${a} ${b}`);
@@ -96,10 +96,10 @@ export const brainGCD = () => {
       console.log('Correct!');
       win += 1;
     } else {
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${ask}'.`);
-        console.log(`Let's try again, ${name}!`);
-        break;
-      }
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${ask}'.`);
+      console.log(`Let's try again, ${name}!`);
+      break;
+    }
   }
   if (win === 3) console.log(`Congratulations, ${name}!`);
 };
@@ -110,14 +110,13 @@ export const brainProgression = () => {
   console.log(`Hello, ${name}!`);
   console.log('What number is missing in the progression?');
   let win = 0;
-    
-  for (let i = 0;i < 3;i += 1) {
+  for (let i = 0; i < 3; i += 1) {
     const array = [];
     const step = rand(1, 10);
     let begin = rand(1, 100);
     const elem = rand(0, 9);
 
-    for (let j = 0;j < 11;j += 1 ) {
+    for (let j = 0; j < 11; j += 1 ) {
       array.push(begin);
       begin += step;
     }
@@ -132,10 +131,10 @@ export const brainProgression = () => {
       console.log('Correct!');
       win += 1;
     } else {
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${ask}'.`);
-        console.log(`Let's try again, ${name}!`);
-        break;
-      }
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${ask}'.`);
+      console.log(`Let's try again, ${name}!`);
+      break;
+    }
   }
   if (win === 3) console.log(`Congratulations, ${name}!`);
 };
@@ -148,7 +147,7 @@ export const brainPrime = () => {
 
   let win = 0;
 
-  for (let i = 0;i < 3;i += 1) {
+  for (let i = 0; i < 3; i += 1) {
     const num = rand(1,100);
     let ask = 'yes';
     for (let j = 2;j < num;j += 1) {
@@ -160,10 +159,10 @@ export const brainPrime = () => {
       console.log('Correct!');
       win += 1;
     } else {
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${ask}'.`);
-        console.log(`Let's try again, ${name}!`);
-        break;
-      }
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${ask}'.`);
+      console.log(`Let's try again, ${name}!`);
+      break;
+    }
   }
   if (win === 3) console.log(`Congratulations, ${name}!`);
 };
