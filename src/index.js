@@ -54,9 +54,9 @@ export const brainCalc = () => {
     const sign = signs[rand(0, 2)];
     let result;
 
-    if (sign === '+') result = (a + b) + '';
-    if (sign === '-') result = (a - b) + '';
-    if (sign === '*') result = (a * b) + '';
+    if (sign === '+') result = String((a + b));
+    if (sign === '-') result = String((a - b));
+    if (sign === '*') result = String((a * b));
 
     console.log(`Question: ${a} ${sign} ${b}`);
     const answer = readlineSync.question('Your answer: ');
@@ -88,7 +88,7 @@ export const brainGCD = () => {
   for (let i = 0; i < 3; i += 1) {
     const a = rand(0, 100);
     const b = rand(0, 100);
-    const ask = nod(a, b) + '';
+    const ask = String(nod(a, b));
     console.log(`Question: ${a} ${b}`);
     const answer = readlineSync.question('Your answer: ');
 
@@ -120,7 +120,7 @@ export const brainProgression = () => {
       begin += step;
     }
 
-    const ask = array[elem] + '';
+    const ask = String(array[elem]);
     array[elem] = '..';
     const str = array.join(' ');
     console.log(`Question: ${str}`);
